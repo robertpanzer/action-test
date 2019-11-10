@@ -1,0 +1,19 @@
+name: Hello Actions
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  my_first_job:
+    name: My Job
+    runs-on: ubuntu-latest
+    env:
+      NAME: Robert
+    steps:
+      - name: Say Hello
+        run: |
+          echo "Hello World"
+          echo "Hello $NAME"
+
+  
